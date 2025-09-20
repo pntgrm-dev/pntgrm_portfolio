@@ -1,14 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryota Nakamura - portfolio </title>
+    <title>Ryota Nakamura - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        #google_translate_element {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            z-index: 1000;
+        }
+    </style>
+
+    <!-- Google Translate スクリプト -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'ja', includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
+
 <body>
-    <head>
+    <!-- 翻訳ボタン -->
+    <div id="google_translate_element"></div>
+
+    <!-- ページコンテンツ -->
+    <header>
         <h1>Ryota Nakamura - Portfolio</h1>
-    </head>
+    </header>
+
     <nav>
         <ul>
             <li><a href="#about">About Me</a></li>
@@ -16,25 +59,29 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <p>Hello! I'm Ryota Nakamura, a software developer with a passion for creating innovative solutions.</p>
+            <p>こんにちは！私は中村亮太です。革新的なソリューションを作ることに情熱を持つソフトウェア開発者です。</p>
         </section>
         <section id="projects">
             <h2>Projects</h2>
             <ul>
-                <li>Project A - A web application for managing tasks.</li>
-                <li>Project B - A mobile app for tracking fitness activities.</li>
-                <li>Project C - An open-source library for data visualization.</li>
+                <li>Project A - タスク管理用の Web アプリケーション</li>
+                <li>Project B - フィットネス活動を記録するモバイルアプリ</li>
+                <li>Project C - データ可視化用のオープンソースライブラリ</li>
             </ul>
         </section>
         <section id="contact">
             <h2>Contact</h2>
-            <p>You can reach me at
+            <p>お問い合わせはメールでお願いします。</p>
+        </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Ryota Nakamura</p>
     </footer>
 </body>
+
 </html>
