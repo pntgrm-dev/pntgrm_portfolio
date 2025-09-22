@@ -1,0 +1,51 @@
+<div id="main_content" class="container">
+    <div id="main_content"></div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        // JSONデータを読み込み、コンテンツを生成
+        fetch("json/main.json")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('ネットワーク応答に問題があります。');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log("JSONデータ:", data);
+
+                // コンテンツを挿入する親要素
+                const mainContent = document.getElementById("main");
+
+                // データが配列であることを確認
+                if (Array.isArray(data)) {
+                    data.forEach(work => {
+                        const workElement = document.createElement('div');
+                        workElement.className = 'work-item';
+
+                        workElement.innerHTML = `
+                        <img src="${work.image}" alt="${work.title}" class="content_box">
+                        <div class="title">
+                        <h2 class="content_title">${work.title}</h2>
+                        <p class="content_year">制作年: ${work.year}</p>
+                        <p class="content_category">カテゴリ: ${work.category}qqq</p>
+                        <p class="content_description">${work.description}</p>
+                        <p class="content_credit">Credit: ${work.credit}qqq</p>
+                        </div>
+                    `;
+                        mainContent.appendChild(workElement);
+                    });
+                } else {
+                    console.error("JSONデータが配列ではありません。");
+                }
+            })
+            .catch(error => {
+                console.error("JSON読み込みエラー:", error);
+                // ユーザーにエラーメッセージを表示
+                document.getElementById("main_content").innerHTML = "<p>作品情報を読み込めませんでした。</p>";
+            });
+    });
+
+</script>

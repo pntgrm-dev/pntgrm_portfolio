@@ -1,0 +1,21 @@
+[
+  {
+    "id": "1",
+    "title": "Mountain Serenity",
+    "image": "assets/img/b437354563564e01d7a8232c606de73c.jpg",
+    "video":"https://youtu.be/HObU-V25UtA?si=M3JogCS__tJjnKxV",
+    "description": "A tranquil mountain scene with a clear blue sky.",
+    "year": "2023",
+    "category": "Landscape",
+    "credit": "Photo by John Doe"
+  },
+  {
+    "id": "2",
+    "title": "City Lights",
+    "image": "assets/img/image-1212.png",
+    "description": "A bustling cityscape at night with vibrant lights.",
+    "year": "2022",
+    "category": "Urban",
+    "credit": "Photo by John Doe"
+  }
+]
